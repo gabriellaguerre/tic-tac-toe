@@ -32,148 +32,115 @@ window.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("a7");
         localStorage.removeItem("a8");
     })
+    let choice;
+    let count = 0;
+
+    a0.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a0.innerText = choice;
+        } else {
+            a0.innerText = 'O'
+        }
+        localStorage.setItem("a0", `${a0.innerText}`)
+        count++
+    })
+
+    a1.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a1.innerText = choice;
+        } else {
+            a1.innerText = 'O'
+        }
+        localStorage.setItem("a1", `${a1.innerText}`)
+        count++
+    })
+
+    a2.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a2.innerText = choice;
+        } else {
+            a2.innerText = 'O'
+        }
+        localStorage.setItem("a2", `${a2.innerText}`)
+        count++
+    })
+
+    a3.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a3.innerText = choice;
+        } else {
+            a3.innerText = 'O'
+        }
+        localStorage.setItem("a3", `${a3.innerText}`)
+        count++
+    })
+
+    a4.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a4.innerText = choice;
+        } else {
+            a4.innerText = 'O'
+        }
+        localStorage.setItem("a4", `${a4.innerText}`)
+        count++
+    })
+
+    a5.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a5.innerText = choice;
+        } else {
+            a5.innerText = 'O'
+        }
+        localStorage.setItem("a5", `${a5.innerText}`)
+        count++
+    })
+
+    a6.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a6.innerText = choice;
+        } else {
+            a6.innerText = 'O'
+        }
+        localStorage.setItem("a6", `${a6.innerText}`)
+        count++
+    })
+
+    a7.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a7.innerText = choice;
+        } else {
+            a7.innerText = 'O'
+        }
+        localStorage.setItem("a7", `${a7.innerText}`)
+        count++
+    })
+
+    a8.addEventListener("click", () => {
+        if (count % 2 === 0) {
+            a8.innerText = choice;
+        } else {
+            a8.innerText = 'O'
+        }
+        localStorage.setItem("a8", `${a8.innerText}`)
+        count++
+
+
+    })
 
     const buttonX = document.getElementById("x")
     buttonX.addEventListener("click", () => {
-        const chosen = document.getElementById("choosen")
-        chosen.innerText = 'Player 1 has chosen: X';
-
-        a0.addEventListener("click", () => {
-            if (!localStorage.getItem("a0")) {
-                a0.innerText = 'X'
-                localStorage.setItem("a0", "X")
-            }
-
-        })
-        a1.addEventListener("click", () => {
-            if (!localStorage.getItem("a1")) {
-                a1.innerText = 'X'
-                localStorage.setItem("a1", "X")
-            }
-
-        })
-        a2.addEventListener("click", () => {
-            if (!localStorage.getItem("a2")) {
-                a2.innerText = 'X'
-                localStorage.setItem("a2", "X")
-            }
-
-        })
-        a3.addEventListener("click", () => {
-            if (!localStorage.getItem("a3")) {
-                a3.innerText = 'X'
-                localStorage.setItem("a3", "X")
-            }
-
-        })
-        a4.addEventListener("click", () => {
-            if (!localStorage.getItem("a4")) {
-                a4.innerText = 'X'
-                localStorage.setItem("a4", "X")
-            }
-
-        })
-        a5.addEventListener("click", () => {
-            if (!localStorage.getItem("a5")) {
-                a5.innerText = 'X'
-                localStorage.setItem("a5", "X")
-            }
-
-        })
-        a6.addEventListener("click", () => {
-            if (!localStorage.getItem("a6")) {
-                a6.innerText = 'X'
-                localStorage.setItem("a6", "X")
-            }
-
-        })
-        a7.addEventListener("click", () => {
-            if (!localStorage.getItem("a7")) {
-                a7.innerText = 'X'
-                localStorage.setItem("a7", "X")
-            }
-
-        })
-        a8.addEventListener("click", () => {
-            if (!localStorage.getItem("a8")) {
-                a8.innerText = 'X'
-                localStorage.setItem("a8", "X")
-            }
-
-        })
-
-
+        chosen = document.getElementById("choosen")
+        choice = 'X'
+        chosen.innerText = `Player 1 has chosen: ${choice}`;
 
     })
 
     const buttonO = document.getElementById("o")
     buttonO.addEventListener("click", () => {
         const chosen = document.getElementById("choosen")
-        chosen.innerText = 'Player 1 has chosen: O'
+        choice = 'O'
+        chosen.innerText = `Player 1 has chosen: ${choice}`;
 
-        a0.addEventListener("click", () => {
-            if (!localStorage.getItem("a0")) {
-                a0.innerText = 'O'
-                localStorage.setItem("a0", "O")
-            }
-
-        })
-        a1.addEventListener("click", () => {
-            if (!localStorage.getItem("a1")) {
-                a1.innerText = 'O'
-                localStorage.setItem("a1", "O")
-            }
-
-        })
-        a2.addEventListener("click", () => {
-            if (!localStorage.getItem("a2")) {
-                a2.innerText = 'O'
-                localStorage.setItem("a2", "O")
-            }
-
-        })
-        a3.addEventListener("click", () => {
-            if (!localStorage.getItem("a3")) {
-                a3.innerText = 'O'
-                localStorage.setItem("a3", "O")
-            }
-
-        })
-        a4.addEventListener("click", () => {
-            if (!localStorage.getItem("a4")) {
-                a4.innerText = 'O'
-                localStorage.setItem("a4", "O")
-            }
-
-        })
-        a5.addEventListener("click", () => {
-            if (!localStorage.getItem("a5")) {
-                a5.innerText = 'O'
-                localStorage.setItem("a5", "O")
-            }
-
-        })
-        a6.addEventListener("click", () => {
-            if (!localStorage.getItem("a6")) {
-                a6.innerText = 'O'
-                localStorage.setItem("a6", "O")
-            }
-
-        })
-        a7.addEventListener("click", () => {
-            if (!localStorage.getItem("a7")) {
-                a7.innerText = 'O'
-                localStorage.setItem("a7", "O")
-            }
-
-        })
-        a8.addEventListener("click", () => {
-            if (!localStorage.getItem("a8")) {
-                a8.innerText = 'O'
-                localStorage.setItem("a8", "O")
-            }
-
-        })
     })
 
 
