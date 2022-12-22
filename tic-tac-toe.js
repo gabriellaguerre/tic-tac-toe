@@ -1,4 +1,8 @@
 window.addEventListener("DOMContentLoaded", () => {
+    let chosen;
+    let choice;
+    let choice2;
+    let count = 0;
 
     const a0 = document.getElementById("a0");
     const a1 = document.getElementById("a1");
@@ -21,6 +25,8 @@ window.addEventListener("DOMContentLoaded", () => {
         a6.innerText = '';
         a7.innerText = '';
         a8.innerText = '';
+        chosen.innerText = '';
+        count = 0;
 
         localStorage.removeItem("a0");
         localStorage.removeItem("a1");
@@ -32,14 +38,12 @@ window.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("a7");
         localStorage.removeItem("a8");
     })
-    let choice;
-    let count = 0;
 
     a0.addEventListener("click", () => {
         if (count % 2 === 0) {
             a0.innerText = choice;
         } else {
-            a0.innerText = 'O'
+            a0.innerText = choice2;
         }
         localStorage.setItem("a0", `${a0.innerText}`)
         count++
@@ -49,7 +53,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a1.innerText = choice;
         } else {
-            a1.innerText = 'O'
+            a1.innerText = choice2;
         }
         localStorage.setItem("a1", `${a1.innerText}`)
         count++
@@ -59,7 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a2.innerText = choice;
         } else {
-            a2.innerText = 'O'
+            a2.innerText = choice2;
         }
         localStorage.setItem("a2", `${a2.innerText}`)
         count++
@@ -69,7 +73,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a3.innerText = choice;
         } else {
-            a3.innerText = 'O'
+            a3.innerText = choice2;
         }
         localStorage.setItem("a3", `${a3.innerText}`)
         count++
@@ -79,7 +83,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a4.innerText = choice;
         } else {
-            a4.innerText = 'O'
+            a4.innerText = choice2;
         }
         localStorage.setItem("a4", `${a4.innerText}`)
         count++
@@ -89,7 +93,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a5.innerText = choice;
         } else {
-            a5.innerText = 'O'
+            a5.innerText = choice2;
         }
         localStorage.setItem("a5", `${a5.innerText}`)
         count++
@@ -99,7 +103,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a6.innerText = choice;
         } else {
-            a6.innerText = 'O'
+            a6.innerText = choice2;
         }
         localStorage.setItem("a6", `${a6.innerText}`)
         count++
@@ -109,7 +113,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a7.innerText = choice;
         } else {
-            a7.innerText = 'O'
+            a7.innerText = choice2;
         }
         localStorage.setItem("a7", `${a7.innerText}`)
         count++
@@ -119,12 +123,10 @@ window.addEventListener("DOMContentLoaded", () => {
         if (count % 2 === 0) {
             a8.innerText = choice;
         } else {
-            a8.innerText = 'O'
+            a8.innerText = choice2;
         }
         localStorage.setItem("a8", `${a8.innerText}`)
         count++
-
-
     })
 
     const buttonX = document.getElementById("x")
@@ -132,15 +134,15 @@ window.addEventListener("DOMContentLoaded", () => {
         chosen = document.getElementById("choosen")
         choice = 'X'
         chosen.innerText = `Player 1 has chosen: ${choice}`;
-
+        choice2 = 'O'
     })
 
     const buttonO = document.getElementById("o")
     buttonO.addEventListener("click", () => {
-        const chosen = document.getElementById("choosen")
+        chosen = document.getElementById("choosen")
         choice = 'O'
         chosen.innerText = `Player 1 has chosen: ${choice}`;
-
+        choice2 = 'X'
     })
 
 
